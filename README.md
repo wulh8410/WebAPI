@@ -27,6 +27,10 @@ app 下载链接：[http://www.wandoujia.com/apps/com.youdao.dict](http://www.wa
 
 app 下载链接：[http://www.wandoujia.com/apps/bingdic.android.activity](http://www.wandoujia.com/apps/bingdic.android.activity)
 
+## [金山词典：API 链接](https://github.com/jokermonn/-Api/blob/master/KingsoftDic.md) ##
+
+金山词典链接：[http://www.iciba.com/](http://www.iciba.com/)
+
 ## [豆瓣电影：API 链接](https://github.com/jokermonn/-Api/blob/master/DoubanMovie.md) ##
 
 ![](http://img.wdjimg.com/mms/icon/v1/9/f4/e2fed53a563d696d990484de34729f49_78_78.png)
