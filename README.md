@@ -15,6 +15,12 @@ app 下载链接：[http://www.wandoujia.com/apps/one.hh.oneclient](http://www.w
 
 app 下载链接：[http://www.wandoujia.com/apps/com.mtime](http://www.wandoujia.com/apps/com.mtime)
 
+## [开眼 Eyepetizer：API 链接](https://github.com/jokermonn/-Api/blob/master/Eyepetizer.md)
+
+![](http://img.wdjimg.com/mms/icon/v1/1/dc/50a4c597efe027933e3a3f90b0afbdc1_78_78.png)
+
+app 下载链接：[http://www.wandoujia.com/apps/com.wandoujia.eyepetizer](http://www.wandoujia.com/apps/com.wandoujia.eyepetizer)
+
 ## [有道词典：API 链接](https://github.com/jokermonn/-Api/blob/master/YoudaoDic.md) ##
 
 ![](http://img.wdjimg.com/mms/icon/v1/0/82/8f4c1ccdc0a96b9c44a5c94709a77820_78_78.png)
