@@ -22,9 +22,9 @@ json 示例：
 
 
 解析：
-`itemList` 内容可根据 `type` 和 `video` 分成三种类型
+`itemList` 内容可根据 `type` 和 `dataType` 分成5种类型
 
-<h3 id="video">第一类：视频</h3>
+<h3 id="home_video">视频</h3>
 - `type`：类型，固定值 `video`
 - `data`：具体数据
 	- `dataType`：数据类型，固定值 `VideoBeanForClient`
@@ -52,20 +52,46 @@ json 示例：
 		- `name`：分类的名称
 		- `actionUrl`：分类的 url
 
-<h3 id="textFooter">textFooter</h2>
-- `text`：信息
-- `actionUrl`：需要拼接的 url
+<h3 id="home_textFooter">textFooter</h3>
+- `type`：类型，固定值 `textFooter`
+- `data`：具体数据
+	- `text`：信息
+	- `actionUrl`：需要拼接的 url
 
-<h3 id="VideoBeanForClient">视频集合
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
+<h3 id="home_videoCollectionWithCover">videoCollectionWithCover</h3>
+- `type`：类型，固定值 `videoCollectionWithCover`
+- `data`：具体数据
+	- `dataType`：数据类型，取值 `ItemCollection`
+	- `header`：内容
+		- `id`：
+		- `font`：字体信息
+		- `cover`：背景图信息
+		- `actionUrl`：需要拼接的 url
+	- `itemList`
+		- // 等同[视频](#home_video)
+	- `count`：`itemList` 长度，即返回数据的总长度
+
+<h3 id="home_textHeader">textHeader</h3>
+同[textFooter](#home_textFooter)
+
+<h3 id="home_videoCollectionOfFollow">home_videoCollectionOfFollow</h3>
+- `type`：类型，固定值 `videoCollectionOfFollow`
+- `data`：具体数据
+	- `dataType`：数据类型，取值 `ItemCollection`
+		- `header`：内容
+			- `id`：
+			- `title`：标题
+			- `font`：字体信息
+			- `cover`：背景图信息
+			- `iconList`：嵌入的小图 url
+			- `actionUrl`：需要拼接的 url
+			- `description`：简易描述
+		- `itemList`
+			- // 等同[视频](#home_video)
+		- `count`：`itemList` 长度，即返回数据的总长度
+- `count`：`itemList` 长度，即返回数据的总长度
+- `nextPageUrl`：加载下一页的 url
+- `date`：日期
+- `nextPublishTime`：下次更新日期
 - ``：
 - ``：
