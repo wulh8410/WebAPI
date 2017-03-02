@@ -1,17 +1,22 @@
 # 一席 #
 
-- [首页](#home)
-	- [首页演讲](#home_lecture)
+- [主页](#home)
+	- [主页演讲](#home_lecture)
 		- [演讲细节](#home_lecture_detail)
 		- [演讲评论](#home_lecture_comments)
 		- [演讲相关](#home_lecture_related)
+- [演讲](#lecture)
+	- [按日期](#lecture_date)
+	- [按观看](#lecture_view)
+	- [按喜欢](#lecture_like)
 - [讲者](#lecturer)
 	- [获取分类](#lecturer_category)
 	- [获取演讲者](#lecturer_lecturer)
 - [枝桠](#branch)
 - [记录](#record)
 - [记录细节](#record_details)
-<h2 id="home">首页</h2>
+
+<h2 id="home">主页</h2>
 
 url：[`http://api.yixi.tv/api/v1/album`](http://api.yixi.tv/api/v1/album)
 
@@ -124,7 +129,7 @@ json 示例：
 		- `tags`：演讲归类
 			- `name`：归类
 
-<h3 id="home_lecture">首页演讲</h3>
+<h3 id="home_lecture">主页演讲</h3>
 
 <h4 id="home_lecture_detail">演讲细节</h4>
 
@@ -313,6 +318,191 @@ json 示例：
 - `lecturer_id`：相关演讲者 id
 
 // 其他内容等同[首页](#home)中的 json
+
+<h2 id="lecture">演讲</h2>
+
+<h3 id="lecture_date">按日期</h3>
+
+url：[`http://api.yixi.tv/api/v1/lecture/list/date/1/desc`](http://api.yixi.tv/api/v1/lecture/list/date/1/desc)
+
+注意：此 url 请求需要添加一个请求头，`User-Agent: YIXIProject/1.2 ( picsize=iphone6+ ; android 5.0.1; Scale/2.75)`
+
+json 解析：
+
+	{
+      "res": 0,
+      "data": [
+        {
+          "date": "2016-11-30",
+          "lectures": [
+            {
+              "id": 400,
+              "title": "每天都是我来这个世界的第一天",
+              "lecturer_id": 105928,
+              "viewnum": "20811",
+              "likenum": "129",
+              "cmtnum": "37",
+              "cover": "http://static.yixi.tv/background/2016-12-10/6a3a923630a05e1fdeb579a385b81d32.315x210.jpg",
+              "background": "http://static.yixi.tv/background/2016-12-10/01db22b0e0e6d6d818417929e3e640f1.1242x746.jpg",
+              "video": "XMTg1MjAxMTU3Mg==",
+              "cate_id": 3,
+              "type": "lec",
+              "published": 1,
+              "site": "景德镇",
+              "time": "2016-11-30",
+              "created_at": "2016-12-10 23:05:34",
+              "lecturer": {
+                "id": 105928,
+                "nickname": "艺术家文那",
+                "pic": "http://static.yixi.tv/portrait/2016-12-10/49da7b1b518c9dcfcd369688bb9e452c.240x240.jpg",
+                "is_lecturer": 1,
+                "cate_id": 3
+              },
+              "tags": [
+                {
+                  "id": 82,
+                  "name": "艺术"
+                },
+                {
+                  "id": 655,
+                  "name": "文那"
+                },
+                {
+                  "id": 656,
+                  "name": "壁画"
+                },
+                {
+                  "id": 713,
+                  "name": "一席纪录"
+                },
+                {
+                  "id": 714,
+                  "name": "神仙"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+
+json 解析：
+
+- `date`：日期
+
+// 其他基本同[主页](#home) json 解析
+
+<h3 id="lecture_view">按观看</h3>
+
+url：[`http://api.yixi.tv/api/v1/lecture/list/view/1/desc`](http://api.yixi.tv/api/v1/lecture/list/view/1/desc)
+
+注意：此 url 请求需要添加一个请求头，`User-Agent: YIXIProject/1.2 ( picsize=iphone6+ ; android 5.0.1; Scale/2.75)`
+
+json 示例：
+
+	{
+      "res": 0,
+      "data": [
+        {
+          "id": 177,
+          "title": "感谢你给我机会上场",
+          "lecturer_id": 296,
+          "viewnum": "88029",
+          "likenum": "1860",
+          "cmtnum": "153",
+          "cover": "http://static.yixi.tv/background/2015-02-28/1c85e9fb9bce3fa31b383545197173d4.315x210.jpg",
+          "background": "",
+          "video": "XNzg2MDQyNzYw",
+          "cate_id": 48,
+          "type": "lec",
+          "published": 1,
+          "site": "上海",
+          "time": "2014-09-07",
+          "created_at": "2015-04-07 15:33:57",
+          "lecturer": {
+            "id": 296,
+            "nickname": "方励",
+            "pic": "http://static.yixi.tv/portrait/2015-01-05/ddb547af8790a326fbb313f04acaee2e.240x240.jpg",
+            "is_lecturer": 1,
+            "cate_id": 52
+          },
+          "tags": [
+            {
+              "id": 22,
+              "name": "青年"
+            },
+            {
+              "id": 26,
+              "name": "创业"
+            },
+            {
+              "id": 47,
+              "name": "冒险精神"
+            },
+            {
+              "id": 96,
+              "name": "文化"
+            }
+          ]
+        }
+      ]
+    }
+
+<h3 id="lecture_like">按喜欢</h3>
+
+url：[`http://api.yixi.tv/api/v1/lecture/list/like/1/desc`](http://api.yixi.tv/api/v1/lecture/list/like/1/desc)
+
+注意：此 url 请求需要添加一个请求头，`User-Agent: YIXIProject/1.2 ( picsize=iphone6+ ; android 5.0.1; Scale/2.75)`
+
+json 示例：
+
+	{
+      "res": 0,
+      "data": [
+        {
+          "id": 177,
+          "title": "感谢你给我机会上场",
+          "lecturer_id": 296,
+          "viewnum": "88029",
+          "likenum": "1861",
+          "cmtnum": "153",
+          "cover": "http://static.yixi.tv/background/2015-02-28/1c85e9fb9bce3fa31b383545197173d4.315x210.jpg",
+          "background": "",
+          "video": "XNzg2MDQyNzYw",
+          "cate_id": 48,
+          "type": "lec",
+          "published": 1,
+          "site": "上海",
+          "time": "2014-09-07",
+          "created_at": "2015-04-07 15:33:57",
+          "lecturer": {
+            "id": 296,
+            "nickname": "方励",
+            "pic": "http://static.yixi.tv/portrait/2015-01-05/ddb547af8790a326fbb313f04acaee2e.240x240.jpg",
+            "is_lecturer": 1,
+            "cate_id": 52
+          },
+          "tags": [
+            {
+              "id": 22,
+              "name": "青年"
+            },
+            {
+              "id": 26,
+              "name": "创业"
+            },
+            {
+              "id": 47,
+              "name": "冒险精神"
+            },
+            {
+              "id": 96,
+              "name": "文化"
+            }
+          ]
+        }
+      ]
+    }
 
 <h2 id="lecturer">讲者</h2>
 
