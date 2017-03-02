@@ -16,6 +16,11 @@
 		- [bannerCollection](#category_bannerCollection)
 		- [videoCollectionOfHorizontalScrollCard](#category_videoCollectionOfHorizontalScrollCard)
 	- [作者](#hot)
+		- [leftAlignTextHeader](#author_leftAlignTextHeader)
+		- [blankCard](#author_blankCard)
+		- [videoCollectionWithBrief](#author_videoCollectionWithBrief)
+		- [briefCard](#author_briefCard)
+
 <h2 id="home">首页</h2>
 
 url：[`http://baobab.kaiyanapp.com/api/v4/tabs/selected`](http://baobab.kaiyanapp.com/api/v4/tabs/selected)
@@ -1197,13 +1202,11 @@ json 解析：
 		- `data`
 			- `id`：id
 			- `title`：标题信息
+			- `follow`
+			- `subTitle`：
 			- `image`：图片信息
 			- `description`：简易描述
 			- `actionUrl`：拼接 url
-
-
-
-
 
 <h3 id="author">作者</h3>
 
@@ -1397,3 +1400,50 @@ json 示例：
       "total": 0,
       "nextPageUrl": "http://baobab.kaiyanapp.com/api/v4/pgcs/all?start=10&num=10"
     }
+
+json 解析：
+除了新增的几个类型之外，其他类型和[首页](#home)中的相同
+
+<h4 id="author_leftAlignTextHeader">leftAlignTextHeader</h4>
+
+- `type`：固定值 `leftAlignTextHeader`
+- `data`
+	- `dataType`：固定值 `LeftAlignTextHeader`
+	- `text`：内容
+	- `font`：字体
+	- `actionUrl`：需要拼接的 url
+
+<h4 id="author_blankCard">blankCard</h4>
+
+- `type`：固定值 `blankCard`
+- `data`
+	- `dataType`：固定值 `blankCard`
+	- `height`：方块宽高
+
+<h4 id="author_videoCollectionWithBrief">videoCollectionWithBrief</h4>
+
+- `type`：固定值 `videoCollectionWithBrief`
+- `data`
+	- `dataType`：固定值 `ItemCollection`
+	- `count`：`itemList` 长度
+	- `itemList`：数据列表
+		- `data`
+			- `id`：id
+			- `title`：标题信息
+			- `image`：图片信息
+			- `description`：简易描述
+			- `actionUrl`：拼接 url
+
+<h4 id="author_briefCard">briefCard</h4>
+
+- `type`：固定值 `briefCard`
+- `data`
+	- `dataType`：固定值 `BriefCard`
+	- `count`：`itemList` 长度
+	- `itemList`：数据列表
+		- `data`
+			- `id`：id
+			- `title`：标题信息
+			- `icon`：图片信息
+			- `description`：简易描述
+			- `actionUrl`：拼接 url
