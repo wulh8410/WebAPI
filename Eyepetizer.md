@@ -20,6 +20,9 @@
 		- [blankCard](#author_blankCard)
 		- [videoCollectionWithBrief](#author_videoCollectionWithBrief)
 		- [briefCard](#author_briefCard)
+- [关注](#follow)
+	- [videoCollectionWithBrief](#follow_videoCollectionWithBrief)
+	- [videoCollectionOfHorizontalScrollCard](#follow_videoCollectionOfHorizontalScrollCard)
 
 <h2 id="home">首页</h2>
 
@@ -1447,3 +1450,294 @@ json 解析：
 			- `icon`：图片信息
 			- `description`：简易描述
 			- `actionUrl`：拼接 url
+
+<h2 id="follow">关注</h2>
+
+url：[`http://baobab.kaiyanapp.com/api/v4/tabs/follow`](http://baobab.kaiyanapp.com/api/v4/tabs/follow)
+
+拼接参数：
+
+- `udid`：用户唯一标识。该参数可为空也可去除
+- `vc`：???，固定值`168`。该参数可为空也可去除
+- `vn`：客户端版本。该参数可为空也可去除
+- `deviceModel`：手机信息。该参数可为空也可去除
+- `first_channel`：???，固定值 `eyepetizer_baidu_market`。该参数可为空也可去除
+- `last_channel`：???，固定值 `eyepetizer_baidu_market`。该参数可为空也可去除
+- `system_version_code`：手机系统版本。该参数可为空也可去除
+
+url 示例：[`http://baobab.kaiyanapp.com/api/v4/tabs/follow?udid=11111&vc=168&vn=3.3.1&deviceModel=Huawei%36&first_channel=eyepetizer_baidu_market&last_channel=eyepetizer_baidu_market&system_version_code=20`](http://baobab.kaiyanapp.com/api/v4/tabs/follow?udid=11111&vc=168&vn=3.3.1&deviceModel=Huawei%36&first_channel=eyepetizer_baidu_market&last_channel=eyepetizer_baidu_market&system_version_code=20) 或 [`http://baobab.kaiyanapp.com/api/v4/tabs/follow`](http://baobab.kaiyanapp.com/api/v4/tabs/follow)
+
+json 示例：
+
+	{
+      "itemList": [
+        {
+          "type": "videoCollectionWithBrief",
+          "data": {
+            "dataType": "ItemCollection",
+            "header": {
+              "id": 174,
+              "icon": "http://img.kaiyanapp.com/ddc5c8162f82415c44d88395bdb86a2b.jpeg",
+              "iconType": "round",
+              "title": "美食台",
+              "subTitle": null,
+              "description": "饿了记得来找我们！",
+              "actionUrl": "eyepetizer://pgc/detail/174/?title=%E7%BE%8E%E9%A3%9F%E5%8F%B0",
+              "adTrack": null,
+              "follow": {
+                "itemType": "author",
+                "itemId": 174,
+                "followed": false
+              }
+            },
+            "itemList": [
+              {
+                "type": "video",
+                "data": {
+                  "dataType": "VideoBeanForClient",
+                  "id": 15049,
+                  "title": "饼干原来是这样做的！简单！",
+                  "description": "饼干是零基础的烘焙小点之一，制作简单，松脆可口。今天，我们教你做三角形的芝士口味饼干，你也可以切分成自己喜欢的形状，无辣不欢的朋友还可以在揉面时加入一些辣椒粉。",
+                  "provider": {
+                    "name": "PGC",
+                    "alias": "PGC",
+                    "icon": ""
+                  },
+                  "category": "开胃",
+                  "author": {
+                    "id": 174,
+                    "icon": "http://img.kaiyanapp.com/ddc5c8162f82415c44d88395bdb86a2b.jpeg",
+                    "name": "美食台",
+                    "description": "饿了记得来找我们！",
+                    "link": "",
+                    "latestReleaseTime": 1488362362000,
+                    "videoNum": 131,
+                    "adTrack": null,
+                    "follow": {
+                      "itemType": "author",
+                      "itemId": 174,
+                      "followed": false
+                    },
+                    "authorType": "NORMAL"
+                  },
+                  "cover": {
+                    "feed": "http://img.kaiyanapp.com/caafa68b6bbd6dce68bf0bfdeac8bf11.png?imageMogr2/quality/60/format/jpg",
+                    "detail": "http://img.kaiyanapp.com/caafa68b6bbd6dce68bf0bfdeac8bf11.png?imageMogr2/quality/60/format/jpg",
+                    "blurred": "http://img.kaiyanapp.com/86f754ef9cb10714ea4c5ec8a15ec338.jpeg?imageMogr2/quality/60/format/jpg",
+                    "sharing": null
+                  },
+                  "playUrl": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=15049&editionType=default&source=ucloud",
+                  "duration": 182,
+                  "webUrl": {
+                    "raw": "http://www.eyepetizer.net/detail.html?vid=15049",
+                    "forWeibo": "http://wandou.im/3m70tr"
+                  },
+                  "releaseTime": 1488362362000,
+                  "playInfo": [
+                    {
+                      "height": 480,
+                      "width": 854,
+                      "urlList": [
+                        {
+                          "name": "ucloud",
+                          "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=15049&editionType=normal&source=ucloud"
+                        },
+                        {
+                          "name": "qcloud",
+                          "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=15049&editionType=normal&source=qcloud"
+                        }
+                      ],
+                      "name": "标清",
+                      "type": "normal",
+                      "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=15049&editionType=normal&source=ucloud"
+                    },
+                    {
+                      "height": 720,
+                      "width": 1280,
+                      "urlList": [
+                        {
+                          "name": "ucloud",
+                          "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=15049&editionType=high&source=ucloud"
+                        },
+                        {
+                          "name": "qcloud",
+                          "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=15049&editionType=high&source=qcloud"
+                        }
+                      ],
+                      "name": "高清",
+                      "type": "high",
+                      "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=15049&editionType=high&source=ucloud"
+                    }
+                  ],
+                  "consumption": {
+                    "collectionCount": 123,
+                    "shareCount": 22,
+                    "replyCount": 0
+                  },
+                  "campaign": null,
+                  "waterMarks": null,
+                  "adTrack": null,
+                  "tags": [],
+                  "type": "NORMAL",
+                  "idx": 0,
+                  "shareAdTrack": null,
+                  "favoriteAdTrack": null,
+                  "webAdTrack": null,
+                  "date": 1488362362000,
+                  "promotion": null,
+                  "label": null,
+                  "collected": false,
+                  "played": false
+                }
+              }
+            ],
+            "count": 5,
+            "adTrack": null
+          }
+        },
+        {
+          "type": "videoCollectionOfHorizontalScrollCard",
+          "data": {
+            "dataType": "ItemCollection",
+            "header": {
+              "id": 38,
+              "title": "综艺",
+              "font": "normal",
+              "cover": null,
+              "label": null,
+              "actionUrl": "eyepetizer://category/38/?title=%E7%BB%BC%E8%89%BA",
+              "subTitle": "全球网红在表演什么",
+              "follow": {
+                "itemType": "category",
+                "itemId": 38,
+                "followed": false
+              }
+            },
+            "itemList": [
+              {
+                "type": "video",
+                "data": {
+                  "dataType": "VideoBeanForClient",
+                  "id": 10258,
+                  "title": "重口慎点：百年丧尸进化",
+                  "description": "丧尸最初和僵尸区分不大，都带有哥特感，皮肤灰败有的甚至会带有吸血鬼属性。然而从丧尸造型变化我们可以看到，观众和游戏玩家已经越来越重口，人们需要不断的刺激。From Xbox",
+                  "provider": {
+                    "name": "YouTube",
+                    "alias": "youtube",
+                    "icon": "http://img.kaiyanapp.com/fa20228bc5b921e837156923a58713f6.png"
+                  },
+                  "category": "综艺",
+                  "author": null,
+                  "cover": {
+                    "feed": "http://img.kaiyanapp.com/6f2241c9ceba2779866293ee5843a902.jpeg?imageMogr2/quality/60",
+                    "detail": "http://img.kaiyanapp.com/6f2241c9ceba2779866293ee5843a902.jpeg?imageMogr2/quality/60",
+                    "blurred": "http://img.kaiyanapp.com/e9d8bb8dc1119e97445ec376ad4e2308.jpeg?imageMogr2/quality/60",
+                    "sharing": null
+                  },
+                  "playUrl": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=10258&editionType=default&source=ucloud",
+                  "duration": 162,
+                  "webUrl": {
+                    "raw": "http://www.eyepetizer.net/detail.html?vid=10258",
+                    "forWeibo": "http://wandou.im/35y8sf"
+                  },
+                  "releaseTime": 1477843200000,
+                  "playInfo": [
+                    {
+                      "height": 480,
+                      "width": 854,
+                      "urlList": [
+                        {
+                          "name": "ucloud",
+                          "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=10258&editionType=normal&source=ucloud"
+                        },
+                        {
+                          "name": "qcloud",
+                          "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=10258&editionType=normal&source=qcloud"
+                        }
+                      ],
+                      "name": "标清",
+                      "type": "normal",
+                      "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=10258&editionType=normal&source=ucloud"
+                    },
+                    {
+                      "height": 720,
+                      "width": 1280,
+                      "urlList": [
+                        {
+                          "name": "ucloud",
+                          "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=10258&editionType=high&source=ucloud"
+                        },
+                        {
+                          "name": "qcloud",
+                          "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=10258&editionType=high&source=qcloud"
+                        }
+                      ],
+                      "name": "高清",
+                      "type": "high",
+                      "url": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=10258&editionType=high&source=ucloud"
+                    }
+                  ],
+                  "consumption": {
+                    "collectionCount": 1204,
+                    "shareCount": 2400,
+                    "replyCount": 56
+                  },
+                  "campaign": null,
+                  "waterMarks": null,
+                  "adTrack": null,
+                  "tags": [
+                    {
+                      "id": 28,
+                      "name": "综艺",
+                      "actionUrl": "eyepetizer://tag/28/?title=%E7%BB%BC%E8%89%BA",
+                      "adTrack": null
+                    },
+                    {
+                      "id": 484,
+                      "name": "干货",
+                      "actionUrl": "eyepetizer://tag/484/?title=%E5%B9%B2%E8%B4%A7",
+                      "adTrack": null
+                    },
+                    {
+                      "id": 572,
+                      "name": "历史",
+                      "actionUrl": "eyepetizer://tag/572/?title=%E5%8E%86%E5%8F%B2",
+                      "adTrack": null
+                    },
+                    {
+                      "id": 132,
+                      "name": "恐怖",
+                      "actionUrl": "eyepetizer://tag/132/?title=%E6%81%90%E6%80%96",
+                      "adTrack": null
+                    }
+                  ],
+                  "type": "NORMAL",
+                  "idx": 0,
+                  "shareAdTrack": null,
+                  "favoriteAdTrack": null,
+                  "webAdTrack": null,
+                  "date": 1477843200000,
+                  "promotion": null,
+                  "label": null,
+                  "collected": false,
+                  "played": false
+                }
+              }
+            ],
+            "count": 1,
+            "adTrack": null
+          }
+        }
+      ],
+      "count": 2,
+      "total": 0,
+      "nextPageUrl": "http://baobab.kaiyanapp.com/api/v4/tabs/follow?start=2&num=2&follow=false&startId=0",
+      "updateTime": null
+    }
+
+json 解析：
+<h3 id="follow_videoCollectionWithBrief">videoCollectionWithBrief</h3>
+与前面的相同
+
+<h3 id="follow_videoCollectionOfHorizontalScrollCard">videoCollectionOfHorizontalScrollCard</h3>
+与前面的相同
