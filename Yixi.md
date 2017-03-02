@@ -5,7 +5,12 @@
 		- [演讲细节](#home_lecture_detail)
 		- [演讲评论](#home_lecture_comments)
 		- [演讲相关](#home_lecture_related)
-
+- [讲者](#lecturer)
+	- [获取分类](#lecturer_category)
+	- [获取演讲者](#lecturer_lecturer)
+- [枝桠](#branch)
+- [记录](#record)
+- [记录细节](#record_details)
 <h2 id="home">首页</h2>
 
 url：[`http://api.yixi.tv/api/v1/album`](http://api.yixi.tv/api/v1/album)
@@ -201,7 +206,9 @@ json 解析：
 
 <h4 id="home_lecture_comments">演讲评论</h4>
 
-url：[`http://api.yixi.tv/api/v1/lecture/comments/416/page/1`](http://api.yixi.tv/api/v1/lecture/comments/416/page/1)
+url：http://api.yixi.tv/api/v1/lecture/comments/ + [首页](#home) 获取的 `lectures` 字段中的 `id` 字段 + /page/ + index
+
+url 示例：[`http://api.yixi.tv/api/v1/lecture/comments/416/page/1`](http://api.yixi.tv/api/v1/lecture/comments/416/page/1)
 
 json 示例：
 
@@ -228,27 +235,6 @@ json 示例：
             "title": "浊水溪三百年",
             "type": "lec"
           }
-        },
-        {
-          "id": 4791,
-          "user_id": 113153,
-          "to_id": 0,
-          "content": "人定胜天，残山残水，真的好悲哀！",
-          "lecture_id": 416,
-          "created_at": "2017-02-28 19:54:09",
-          "updated_at": "2017-02-28 19:54:09",
-          "user": {
-            "id": 113153,
-            "nickname": "一年级",
-            "pic": "http://static.yixi.tv/portrait/2017-02-13/cea906a5d2a19946fb308f4e6355000a.160x160.jpg",
-            "is_lecturer": 0
-          },
-          "touser": null,
-          "lecture": {
-            "id": 416,
-            "title": "浊水溪三百年",
-            "type": "lec"
-          }
         }
       ]
     }
@@ -260,10 +246,13 @@ json 解析：
 - `created_at`：发表时间
 - `user`：用户信息
 - `lecture`：演讲信息
+- `lecture_id`：演讲 id
 
 <h4 id="home_lecture_related">演讲相关</h4>
 
-url：[`http://api.yixi.tv/api/v1/lecture/416/related`](http://api.yixi.tv/api/v1/lecture/416/related)
+url：http://api.yixi.tv/api/v1/lecture/ + [首页](#home) 获取的 `lectures` 字段中的 `id` 字段 + /related
+
+url 示例：[`http://api.yixi.tv/api/v1/lecture/416/related`](http://api.yixi.tv/api/v1/lecture/416/related)
 
 json 示例：
 
@@ -320,19 +309,333 @@ json 示例：
     }
 
 - `title`：相关演讲标题
-- `lecturer_id`：相关演讲 id
+- `id`：演讲 id
+- `lecturer_id`：相关演讲者 id
+
 // 其他内容等同[首页](#home)中的 json
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
-- ``：
+
+<h2 id="lecturer">讲者</h2>
+
+<h3 id="lecturer_category">获取分类</h3>
+
+url：[`http://api.yixi.tv/api/v1/category/list`](http://api.yixi.tv/api/v1/category/list)
+
+json 示例：
+
+	{
+      "res": 0,
+      "data": [
+        {
+          "id": 48,
+          "name": "态度"
+        },
+        {
+          "id": 5,
+          "name": "观察"
+        },
+        {
+          "id": 16,
+          "name": "行当"
+        },
+        {
+          "id": 46,
+          "name": "创意"
+        },
+        {
+          "id": 4,
+          "name": "家园"
+        },
+        {
+          "id": 3,
+          "name": "文艺"
+        },
+        {
+          "id": 19,
+          "name": "科技"
+        },
+        {
+          "id": 28,
+          "name": "商业"
+        },
+        {
+          "id": 50,
+          "name": "年会"
+        },
+        {
+          "id": 51,
+          "name": "一个礼物"
+        },
+        {
+          "id": 52,
+          "name": "枝桠"
+        },
+        {
+          "id": 53,
+          "name": "公益"
+        }
+      ]
+    }
+
+json 解析：
+	
+- `id`：分类 id，用于拼接在[获取演讲者](#lecturer_lecturer)的 url 上
+- `name`：分类类型
+
+<h3 id="lecturer_lecturer">获取演讲者</h3>
+
+url：http://api.yixi.tv/api/v1/category/ + 拼接[获取分类](#lecturer_category)的 `id` 字段 + /lecturers
+
+url 示例：[`http://api.yixi.tv/api/v1/category/48/lecturers`](http://api.yixi.tv/api/v1/category/48/lecturers)
+
+json 示例：
+
+	{
+      "res": 0,
+      "data": [
+        {
+          "id": 83643,
+          "nickname": "魏勇",
+          "desc": "北京十一学校历史教师",
+          "pic": "http://static.yixi.tv/portrait/2016-06-06/5a4bc976f6f0495014e7587c56d1b22f.160x160.jpg",
+          "background": "http://static.yixi.tv/background/2016-06-06/42a988c7c3323aed14ba5e451bcc6c1b.995x500.jpg",
+          "is_lecturer": 1,
+          "cate_id": 48,
+          "lectures_with_cover": [
+            {
+              "id": 367,
+              "title": "历史课怎样开脑洞",
+              "lecturer_id": 83643,
+              "cover": "http://static.yixi.tv/background/2016-06-06/ea3048a27707c1ae2b9e89cdcd1e4b3a.800x450.jpg"
+            }
+          ]
+        },
+        {
+          "id": 37519,
+          "nickname": "蔡春猪",
+          "desc": "《爸爸爱喜禾》作者。原名蔡朝晖。曾做过杂志编辑、电视节目编导，现从事影视剧编剧。儿子两岁时被诊断为自闭症后，开设微博“爸爸爱喜禾”，纪录儿子的生活点滴，感动读者之余也引发了人们对自闭症的关注。",
+          "pic": "http://static.yixi.tv/portrait/2015-08-01/cdd54e6986159377fa570cb6bf478c60.160x160.jpg",
+          "background": "http://static.yixi.tv/background/2015-08-01/a5635772bd8ae25be4c1561ae4ad9281.995x500.jpg",
+          "is_lecturer": 1,
+          "cate_id": 48,
+          "lectures_with_cover": [
+            {
+              "id": 282,
+              "title": "爸爸爱喜禾吗",
+              "lecturer_id": 37519,
+              "cover": "http://static.yixi.tv/background/2015-08-01/ab6a156561977c8825976ea98d495236.800x450.jpg"
+            }
+          ]
+        }
+      ]
+    }
+
+json 解析：
+
+- `id`：演讲者 id
+- `nickname`：演讲者姓名
+- `desc`：演讲者姓名
+- `pic`：演讲者头像
+- `background`：个人介绍的北京
+- `lectures_with_cover`：所有的演讲
+	- `id`：演讲 id
+	- `title`：演讲标题
+	- `cover`：演讲照
+
+<h2 id="branch">枝桠</h2>
+
+url：[`http://api.yixi.tv/api/v1/zhiya/list/1`](http://api.yixi.tv/api/v1/zhiya/list/1)
+
+数据已经几个月没更新了。。。
+
+<h2 id="record">记录</h2>
+
+url：[`http://api.yixi.tv/api/v1/record/1`
+](http://api.yixi.tv/api/v1/record/1)
+
+json 示例：
+
+	{
+      "res": 0,
+      "data": [
+        {
+          "id": 187,
+          "title": "乐满丽江",
+          "desc": "丽江刚被评为“全国十佳宜居地”和“全国十佳投资地”，流浪歌手大军正夜以继日在路边卖唱，他准备在过年后筹足资金录制自己的第二张专辑。丽江的酒吧里，每个人都在诉说着自己的苦楚和挣扎。直到有一天，音乐声响彻整个丽江古城。",
+          "lecturer_id": 0,
+          "viewnum": "18249",
+          "likenum": "608",
+          "cmtnum": "36",
+          "cover": "http://static.yixi.tv/background/2015-01-05/847666fedd09594c00ce0b571e989422.210x140.jpg",
+          "background": "http://static.yixi.tv/background/2015-01-05/890d63bdc341106a302a5c1d8f47dd3f.1536x1536.jpg",
+          "video": "XODg1MjI4NTUy",
+          "cate_id": 0,
+          "type": "record",
+          "published": 1,
+          "site": "",
+          "time": "2015-01-05",
+          "created_at": "2015-01-05 12:46:35",
+          "tags": []
+        },
+        {
+          "id": 186,
+          "title": "阿肯",
+          "desc": "阿肯，是哈萨克族对他们草原上的吟游诗人的尊称，他们自由浪漫，他们走遍草原的每个角落，传诵着哈萨克民族千百年来那些美丽的故事，而他们还有一个共同的特点，都是弹奏冬不拉的高手，穆热阿勒，一个哈萨克族青年，从很小的时候就开始学习冬不拉，然而不一样的是，现在在他周围，没有草原，只有城市，这里没有太多哈萨克同伴，而他最好的伙伴就是手里的冬不拉，他热爱自己的民族，热爱演奏，但是他的生活常常被这个城市的其他的观念所不停的冲击着，而阿勒，最终能否领悟到古老阿肯的灵魂呢？",
+          "lecturer_id": 0,
+          "viewnum": "4311",
+          "likenum": "55",
+          "cmtnum": "9",
+          "cover": "http://static.yixi.tv/background/2015-01-05/94f2acc9d63a4780b02c5c4917227503.210x140.jpg",
+          "background": "http://static.yixi.tv/background/2015-01-05/73b64d3f7ae5e0a404809f11bbe40bc0.1536x1536.jpg",
+          "video": "XNjg2NjUwODk2",
+          "cate_id": 0,
+          "type": "record",
+          "published": 1,
+          "site": "",
+          "time": "2015-01-05",
+          "created_at": "2015-01-05 12:43:41",
+          "tags": []
+        },
+        {
+          "id": 411,
+          "title": "戴若犁「逃离自己想逃离的，超越自己想超越的 」",
+          "desc": "戴若犁是诺亦腾的CTO，联合创始人。他们为《权力的游戏》和《寻龙诀》提供了动作捕捉技术。",
+          "lecturer_id": 0,
+          "viewnum": "176",
+          "likenum": "2",
+          "cmtnum": "0",
+          "cover": "http://static.yixi.tv/background/2017-01-12/eabfa2db53b83c5490b71d7fad8e0242.210x140.jpg",
+          "background": "http://static.yixi.tv/background/2017-01-12/be12817968c4a0977fe9769721f6e591.1536x1536.jpg",
+          "video": "XMTg4NDM0MzkwMA==",
+          "cate_id": 0,
+          "type": "record",
+          "published": 1,
+          "site": "",
+          "time": "-0001-11-30",
+          "created_at": "2017-01-05 15:07:41",
+          "tags": []
+        },
+        {
+          "id": 410,
+          "title": "Alex「傲娇的雪糕」",
+          "desc": "深圳创业者王海达（Alex），本土冰激凌品牌亚历山达（Alexander's）创始人。",
+          "lecturer_id": 0,
+          "viewnum": "122",
+          "likenum": "1",
+          "cmtnum": "0",
+          "cover": "http://static.yixi.tv/background/2017-01-12/0fed6b04158d0c0ae4240d4ba3cdbc2f.210x140.jpg",
+          "background": "http://static.yixi.tv/background/2017-01-12/f235a4eb7cc7d4cc2687f16e0af0ccb4.1536x1536.jpg",
+          "video": "XMTg1ODQ3NjA0OA==",
+          "cate_id": 0,
+          "type": "record",
+          "published": 1,
+          "site": "",
+          "time": "-0001-11-30",
+          "created_at": "2017-01-05 14:54:52",
+          "tags": []
+        },
+        {
+          "id": 409,
+          "title": "陶冶「我已经产生了想要跟所有人沟通的欲望 」",
+          "desc": "我不裹胁任何的含义在里面，我只提供素材。回到身体本身，也算是给我在这个眼花缭乱的时代选择的一个归处。",
+          "lecturer_id": 0,
+          "viewnum": "174",
+          "likenum": "1",
+          "cmtnum": "0",
+          "cover": "http://static.yixi.tv/background/2017-01-12/388be7281aafe4ddb6c83c957d7ab0d7.210x140.jpg",
+          "background": "http://static.yixi.tv/background/2017-01-12/545318d387c6d59e9d11f640aeb09a76.1536x1536.jpg",
+          "video": "XMTg4OTQ3NjI4MA==",
+          "cate_id": 0,
+          "type": "record",
+          "published": 1,
+          "site": "",
+          "time": "-0001-11-30",
+          "created_at": "2017-01-05 14:13:15",
+          "tags": []
+        },
+        {
+          "id": 408,
+          "title": "小鹏「旅行者最需要学会的一个词是回家」",
+          "desc": "当我们对小鹏说要拍摄他的纪录片时，小鹏给了我们一个硬盘，他说，我的整个人生都交给你们了，你要好好地保护他。",
+          "lecturer_id": 0,
+          "viewnum": "207",
+          "likenum": "3",
+          "cmtnum": "0",
+          "cover": "http://static.yixi.tv/background/2017-01-12/6b05ca63b9d2c42e9d17edb3c8942350.210x140.jpg",
+          "background": "http://static.yixi.tv/background/2017-01-12/2ed86de7a66980d213a811f002808693.1536x1536.jpg",
+          "video": "XMTg5MDc1MDE0OA==",
+          "cate_id": 0,
+          "type": "record",
+          "published": 1,
+          "site": "",
+          "time": "-0001-11-30",
+          "created_at": "2017-01-05 13:58:49",
+          "tags": []
+        },
+        {
+          "id": 407,
+          "title": "文那「每天都是我来这个世界的第一天 」",
+          "desc": "“好多人都说把每天当成世界末日去活，我就是把每天当成第一天去活。每天我都是第一天来这个世界，看到什么都特新鲜。”",
+          "lecturer_id": 0,
+          "viewnum": "111",
+          "likenum": "1",
+          "cmtnum": "1",
+          "cover": "http://static.yixi.tv/background/2017-01-12/d2e9ecb09c76ffe3f1e434e275a15d42.210x140.jpg",
+          "background": "http://static.yixi.tv/background/2017-01-12/6f39d05e2b9183bbbec88cf43340e9cd.1536x1536.jpg",
+          "video": "XMTg1MjAxMTU3Mg==",
+          "cate_id": 0,
+          "type": "record",
+          "published": 1,
+          "site": "",
+          "time": "-0001-11-30",
+          "created_at": "2017-01-05 12:57:10",
+          "tags": []
+        }
+      ]
+    }
+
+json 解析：
+
+- `id`：用于拼接[记录细节](#record_details)的 url
+- `title`：标题
+- `desc`：内容简易描述
+
+<h2 id="record_details">记录细节</h2>
+
+url：http://api.yixi.tv/api/v1/lecture/detail/ + 从[记录](#record)中获取的 id 字段
+
+url 示例：[`http://api.yixi.tv/api/v1/lecture/detail/186`](http://api.yixi.tv/api/v1/lecture/detail/186)
+
+json 示例：
+
+	{
+      "res": 0,
+      "data": {
+        "id": 186,
+        "title": "阿肯",
+        "desc": "阿肯，是哈萨克族对他们草原上的吟游诗人的尊称，他们自由浪漫，他们走遍草原的每个角落，传诵着哈萨克民族千百年来那些美丽的故事，而他们还有一个共同的特点，都是弹奏冬不拉的高手，穆热阿勒，一个哈萨克族青年，从很小的时候就开始学习冬不拉，然而不一样的是，现在在他周围，没有草原，只有城市，这里没有太多哈萨克同伴，而他最好的伙伴就是手里的冬不拉，他热爱自己的民族，热爱演奏，但是他的生活常常被这个城市的其他的观念所不停的冲击着，而阿勒，最终能否领悟到古老阿肯的灵魂呢？",
+        "lecturer_id": 0,
+        "viewnum": "4311",
+        "likenum": "55",
+        "cmtnum": "9",
+        "purecontent": "",
+        "enpurecontent": "",
+        "cover": "http://static.yixi.tv/background/2015-01-05/94f2acc9d63a4780b02c5c4917227503.800x450.jpg",
+        "background": "http://static.yixi.tv/background/2015-01-05/73b64d3f7ae5e0a404809f11bbe40bc0.1536.jpg",
+        "video": "XNjg2NjUwODk2",
+        "cate_id": 0,
+        "type": "record",
+        "published": 1,
+        "site": "",
+        "time": "2015-01-05",
+        "created_at": "2015-01-05 12:43:41",
+        "tags": [],
+        "liked": 0,
+        "bookmarked": 0
+      }
+    }
+
+json 解析：
+
+- `id`：
+- `title`：标题
+- `desc`：描述
