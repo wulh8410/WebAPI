@@ -21,6 +21,12 @@ app 下载链接：[http://www.wandoujia.com/apps/com.mtime](http://www.wandouji
 
 app 下载链接：[http://www.wandoujia.com/apps/com.wandoujia.eyepetizer](http://www.wandoujia.com/apps/com.wandoujia.eyepetizer)
 
+## [一席：API 链接](https://github.com/jokermonn/-Api/blob/master/Yixi.md)
+
+![](http://img.wdjimg.com/mms/icon/v1/9/b4/9ee57d8fe18ce1d0a5f226e757f44b49_78_78.png)
+
+app 下载链接：[http://www.wandoujia.com/apps/com.taguxdesign.yixi](http://www.wandoujia.com/apps/com.taguxdesign.yixi)
+
 ## [有道词典：API 链接](https://github.com/jokermonn/-Api/blob/master/YoudaoDic.md) ##
 
 ![](http://img.wdjimg.com/mms/icon/v1/0/82/8f4c1ccdc0a96b9c44a5c94709a77820_78_78.png)
