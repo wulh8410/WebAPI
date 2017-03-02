@@ -12,6 +12,9 @@
 		- [squareCardCollection](#hot_squareCardCollection)
 		- [textHeader](#hot_textHeader)
 	- [分类](#category)
+		- [squareCardCollection](#category_squareCardCollection)
+		- [bannerCollection](#category_bannerCollection)
+		- [videoCollectionOfHorizontalScrollCard](#category_videoCollectionOfHorizontalScrollCard)
 	- [作者](#hot)
 <h2 id="home">首页</h2>
 
@@ -930,7 +933,7 @@ json 解析：
 			- `title`：标题信息
 			- `image`：图片信息
 			- `description`：简易描述
-			- `actionUrl`：拼接 url
+			- `actionUrl`：拼接的 url
 
 <h4 id="hot_squareCardCollection">squareCardCollection</h4>
 - `type`：固定值 `squareCardCollection`
@@ -1153,6 +1156,50 @@ json 示例：
       "nextPageUrl": "http://baobab.kaiyanapp.com/api/v4/discovery/category?start=4&num=4"
     }
 
+json 解析：
+除了新增的几个类型之外，其他类型和[首页](#home)中的相同
+
+<h4 id="category_squareCardCollection">squareCardCollection</h4>
+
+- `type`：固定值 `squareCardCollection`
+- `data`
+	- `dataType`：固定值 `ItemCollection`
+	- `count`：`itemList` 长度
+	- `itemList`：数据列表
+		- `data`
+			- `id`：id
+			- `title`：标题信息
+			- `image`：图片信息
+			- `description`：简易描述
+			- `actionUrl`：拼接 url
+
+<h4 id="category_bannerCollection">bannerCollection</h4>
+
+- `type`：固定值 `bannerCollection`
+- `data`
+	- `dataType`：固定值 `ItemCollection`
+	- `count`：`itemList` 长度
+	- `itemList`：数据列表
+		- `data`
+			- `id`：id
+			- `title`：标题信息
+			- `image`：图片信息
+			- `description`：简易描述
+			- `actionUrl`：拼接 url
+
+<h4 id="category_videoCollectionOfHorizontalScrollCard">videoCollectionOfHorizontalScrollCard</h4>
+
+- `type`：固定值 `videoCollectionOfHorizontalScrollCard`
+- `data`
+	- `dataType`：固定值 `ItemCollection`
+	- `count`：`itemList` 长度
+	- `itemList`：数据列表
+		- `data`
+			- `id`：id
+			- `title`：标题信息
+			- `image`：图片信息
+			- `description`：简易描述
+			- `actionUrl`：拼接 url
 
 
 
