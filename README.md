@@ -1,6 +1,8 @@
 # 声明 #
 **以下所有 API 均由产品公司自身提供，本人皆从网络获取。获取与共享之行为或有侵犯产品权益的嫌疑。若被告知需停止共享与使用，本人会及时删除此页面与整个项目。请您暸解相关情况，并遵守产品协议。**
 
+#再三声明，仅供学习，禁止商业使用#
+
 ## [ONE v3.5.0 之前版本：API 链接](https://github.com/jokermonn/-Api/blob/master/ONE~v3.5.0.md) ##
 
 ## [ONE v3.5.0 之后版本：API 链接](https://github.com/jokermonn/-Api/blob/master/ONEv3.5.0~.md) ##
