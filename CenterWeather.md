@@ -249,7 +249,7 @@ json 示例：
 		- `cop`：???
 		- `wind`：风力信息
 
-<h2 id="weather_details">中央天气预报</h2>
+<h2 id="weather_details">中央天气预报细节</h2>
 
 url：http://tj.nineton.cn/Heart/index/future24h/
 
