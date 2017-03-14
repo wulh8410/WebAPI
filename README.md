@@ -29,6 +29,12 @@ app 下载链接：[http://www.wandoujia.com/apps/com.wandoujia.eyepetizer](http
 
 app 下载链接：[http://www.wandoujia.com/apps/com.taguxdesign.yixi](http://www.wandoujia.com/apps/com.taguxdesign.yixi)
 
+## [图虫：API 链接](https://github.com/jokermonn/-Api/blob/master/Tuchong.md) ##
+
+![](http://img.wdjimg.com/mms/icon/v1/2/aa/f48ed2474e55152abd56bcddaf267aa2_78_78.png)
+
+app 下载链接：[http://www.wandoujia.com/apps/com.ss.android.tuchong](http://www.wandoujia.com/apps/com.ss.android.tuchong)
+
 ## [内涵段子：API 链接](https://github.com/jokermonn/-Api/blob/master/Neihan.md) ##
 
 ![](http://img.wdjimg.com/mms/icon/v1/d/4b/f30e5577cbc8f0c4f7fb9738a85894bd_78_78.png)
