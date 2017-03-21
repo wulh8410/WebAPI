@@ -1312,7 +1312,7 @@ url：http://fanyi.youdao.com/translate
 - `network`：略，同[释义](#explain)
 - `abtest`：略，同[联想](#associate)
 
-url 示例：[`http://fanyi.youdao.com/translate?doctype=json&jsonversion=&type=&keyfrom=&model=&mid=&imei=&vendor=&screen=&ssid=&network=&abtest=`](doctype=json&jsonversion=&type=&keyfrom=&model=&mid=&imei=&vendor=&screen=&ssid=null&network=&abtest=)
+url 示例：[`http://fanyi.youdao.com/translate?doctype=json&jsonversion=&type=&keyfrom=&model=&mid=&imei=&vendor=&screen=&ssid=&network=&abtest=`](http://fanyi.youdao.com/translate?doctype=json&jsonversion=&type=&keyfrom=&model=&mid=&imei=&vendor=&screen=&ssid=&network=&abtest=)
 
 json 示例：
 
