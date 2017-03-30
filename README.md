@@ -1,8 +1,6 @@
 # 声明 #
 **以下所有 API 均由产品公司自身提供，本人皆从网络获取。获取与共享之行为或有侵犯产品权益的嫌疑。若被告知需停止共享与使用，本人会及时删除此页面与整个项目。请您暸解相关情况，并遵守产品协议。**
 
-#再三声明，仅供学习，禁止商业使用#
-
 ## [ONE v3.5.0 之前版本：API 链接](https://github.com/jokermonn/-Api/blob/master/ONE~v3.5.0.md) ##
 
 ## [ONE v3.5.0 之后版本：API 链接](https://github.com/jokermonn/-Api/blob/master/ONEv3.5.0~.md) ##
@@ -29,17 +27,11 @@ app 下载链接：[http://www.wandoujia.com/apps/com.wandoujia.eyepetizer](http
 
 app 下载链接：[http://www.wandoujia.com/apps/com.taguxdesign.yixi](http://www.wandoujia.com/apps/com.taguxdesign.yixi)
 
-## [图虫：API 链接](https://github.com/jokermonn/-Api/blob/master/Tuchong.md) ##
+## [有道词典：API 链接](https://github.com/jokermonn/-Api/blob/master/YoudaoDic.md) ##
 
-![](http://img.wdjimg.com/mms/icon/v1/2/aa/f48ed2474e55152abd56bcddaf267aa2_78_78.png)
+![](http://img.wdjimg.com/mms/icon/v1/0/82/8f4c1ccdc0a96b9c44a5c94709a77820_78_78.png)
 
-app 下载链接：[http://www.wandoujia.com/apps/com.ss.android.tuchong](http://www.wandoujia.com/apps/com.ss.android.tuchong)
-
-## [内涵段子：API 链接](https://github.com/jokermonn/-Api/blob/master/Neihan.md) ##
-
-![](http://img.wdjimg.com/mms/icon/v1/d/4b/f30e5577cbc8f0c4f7fb9738a85894bd_78_78.png)
-
-app 下载链接：[http://www.wandoujia.com/apps/com.ss.android.essay.joke](http://www.wandoujia.com/apps/com.ss.android.essay.joke)
+app 下载链接：[http://www.wandoujia.com/apps/com.youdao.dict](http://www.wandoujia.com/apps/com.youdao.dict)
 
 ## [微软必应词典：API 链接](https://github.com/jokermonn/-Api/blob/master/BingDic.md) ##
 
@@ -62,6 +54,12 @@ app 下载链接：[http://www.wandoujia.com/apps/com.douban.movie](http://www.w
 ![](http://img.wdjimg.com/mms/icon/v1/5/22/05be4e3dc6e4beaf4be0c1249c176225_78_78.png)
 
 app 下载链接：[http://www.wandoujia.com/apps/com.nineton.weatherforecast](http://www.wandoujia.com/apps/com.nineton.weatherforecast)
+
+## [小米天气：API 链接](https://github.com/jokermonn/-Api/blob/master/XiaomiWeather.md) ##
+
+![](http://i1.piimg.com/567571/d9d68c0ad8def11b.png)
+
+app 下载链接（非小米不可安装）：[http://www.cr173.com/soft/264860.html](http://www.cr173.com/soft/264860.html)
 
 ## [魅族天气：API 链接](https://github.com/jokermonn/-Api/blob/master/MeizuWeather.md) ##
 
