@@ -15,6 +15,12 @@ app 下载链接：[http://www.wandoujia.com/apps/one.hh.oneclient](http://www.w
 
 app 下载链接：[http://www.wandoujia.com/apps/com.mtime](http://www.wandoujia.com/apps/com.mtime)
 
+## [今日头条：API 链接](https://github.com/jokermonn/-Api/blob/master/Todaynews.md) ##
+
+![](http://img.wdjimg.com/mms/icon/v1/4/97/4b8356b706e0048b4ca9677c426c3974_78_78.png)
+
+app 下载链接：[http://www.wandoujia.com/apps/com.ss.android.article.news](http://www.wandoujia.com/apps/com.ss.android.article.news)
+
 ## [开眼 Eyepetizer：API 链接](https://github.com/jokermonn/-Api/blob/master/Eyepetizer.md)
 
 ![](http://img.wdjimg.com/mms/icon/v1/1/dc/50a4c597efe027933e3a3f90b0afbdc1_78_78.png)
