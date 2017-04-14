@@ -33,6 +33,12 @@ app 下载链接：[http://www.wandoujia.com/apps/com.wandoujia.eyepetizer](http
 
 app 下载链接：[http://www.wandoujia.com/apps/com.taguxdesign.yixi](http://www.wandoujia.com/apps/com.taguxdesign.yixi)
 
+## [梨视频：API 链接](https://github.com/jokermonn/-Api/blob/master/Livideo.md) ##
+
+![](http://img.wdjimg.com/mms/icon/v1/9/ed/93acb88683bd7976ca04a61201e9ded9_78_78.png)
+
+app 下载链接：[http://www.wandoujia.com/apps/com.mobile.videonews.li.video](http://www.wandoujia.com/apps/com.mobile.videonews.li.video)
+
 ## [有道词典：API 链接](https://github.com/jokermonn/-Api/blob/master/YoudaoDic.md) ##
 
 ![](http://img.wdjimg.com/mms/icon/v1/0/82/8f4c1ccdc0a96b9c44a5c94709a77820_78_78.png)
