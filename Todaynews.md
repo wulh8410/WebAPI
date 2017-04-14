@@ -49,7 +49,7 @@ url 示例：[`http://is.snssdk.com/api/news/feed/v51/?category=news_hot&refer=1
 <h2 id="category">category 列表</h2>
 
 | 标签        | category 值           |
-| ------------- |:-------------:| -----:|
+| ------------- |:-------------:|
 |  热点    | news_hot |
 |  视频    |   video    |
 | 社会 |   news_society    |
