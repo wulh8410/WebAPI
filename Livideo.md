@@ -5,7 +5,10 @@
 	- [头条详细内容](#head_details)
 
 <h2 id="listGet">列表获取</h2>
-url：`http://app.pearvideo.com/clt/jsp/v2/domainList.jsp?type=ALL`
+
+url：[`http://app.pearvideo.com/clt/jsp/v2/domainList.jsp?type=ALL`](http://app.pearvideo.com/clt/jsp/v2/domainList.jsp?type=ALL)
+
+请求方式：GET
 
 json 示例：
 
